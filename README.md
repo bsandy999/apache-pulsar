@@ -154,3 +154,15 @@ cluster1/broker1/bin/pulsar-admin namespaces grant-permission cpaas/email \
     
 cluster1/broker1/bin/pulsar-admin namespaces permissions cpaas/email
 ```
+
+#### 5. Manage topics
+```
+cluster1/broker1/bin/pulsar-admin topics list my-tenant/my-namespace
+cluster1/broker1/bin/pulsar-admin topics create-partitioned-topic -p 9 persistent://my-tenant/my-namespace/topic
+cluster1/broker1/bin/pulsar-admin persistent get-partitioned-topic-metadata persistent://my-tenant/my-namespace/topic
+cluster1/broker1/bin/pulsar-admin persistent partitioned-stats persistent://my-tenant/my-namespace/topic --per-partition
+cluster1/broker1/bin/pulsar-admin topics partitioned-lookup persistent://my-tenant/my-namespace/topic --sort-by-broker
+cluster1/broker1/bin/pulsar-admin persistent delete-partitioned-topic persistent://my-tenant/my-namespace/topic
+for i in $(seq 0 8); do cluster1/broker1/bin/pulsar-admin topics lookup persistent://my-tenant/my-namespace/topic-$i; done
+
+```
