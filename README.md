@@ -71,3 +71,15 @@ cluster1/zk1/bin/pulsar initialize-cluster-metadata \
     --broker-service-url pulsar://10.160.0.8:6650,10.160.0.9:6650,10.160.0.10:6650 \
     --broker-service-url-tls pulsar+ssl://10.160.0.8:6651,10.160.0.9:6651,10.160.0.10:6651
 ```
+#### 3. Deploy a BookKeeper cluster
+```bash
+bk-cluster/bk1/bin/pulsar-daemon start bookie
+bk-cluster/bk2/bin/pulsar-daemon start bookie
+bk-cluster/bk3/bin/pulsar-daemon start bookie
+```
+On successful bookie start up your Prometheus monitoring dashboard must look like this without any error
+
+![image](https://user-images.githubusercontent.com/3489735/216020985-72877bdb-77a6-458c-b7c7-51ce2f55a1ea.png)
+
+
+
