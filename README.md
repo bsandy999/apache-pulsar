@@ -146,3 +146,11 @@ cluster1/broker1/bin/pulsar-admin namespaces delete test-tenant/namespace1
  cluster1/broker1/bin/pulsar-admin namespaces set-clusters test-tenant/namespace1 --clusters cl1,cl2
  cluster1/broker1/bin/pulsar-admin namespaces get-clusters test-tenant/cluster1/namespace1
  ```
+  ###### 4.2  Managing permissions
+```
+cluster1/broker1/bin/pulsar-admin namespaces grant-permission cpaas/email \
+    --actions produce,consume \
+    --role admin
+    
+cluster1/broker1/bin/pulsar-admin namespaces permissions cpaas/email
+```
