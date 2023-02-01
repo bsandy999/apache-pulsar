@@ -81,5 +81,17 @@ On successful bookie start up your Prometheus monitoring dashboard must look lik
 
 ![image](https://user-images.githubusercontent.com/3489735/216020985-72877bdb-77a6-458c-b7c7-51ce2f55a1ea.png)
 
+You can verify that a bookie works properly by running the `bookiesanity` command on the BookKeeper shell:
+
+```
+bk-cluster/bk1/bin/bookkeeper shell bookiesanity
+```
+
+After you start all the bookies, you can use `simpletest` command for BookKeeper shell on any bookie node, to verify all the bookies in the cluster are up running.
+```
+bk-cluster/bk1/bin/bookkeeper shell simpletest --ensemble <num-bookies> --writeQuorum <num-bookies> --ackQuorum <num-bookies> --numEntries <num-entries>
+```
+
+
 
 
