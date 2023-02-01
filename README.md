@@ -109,9 +109,9 @@ cluster1/broker1/bin/pulsar-admin clusters list
 #### Tenant resources
 ``` 
 cluster1/broker1/bin/pulsar-admin tenants list
-cluster1/broker1/bin/pulsar-admin brokers leader-broker   //get leader broker
 ```
 #### Brokers resources
 ```
 cluster1/broker1/bin/pulsar-admin brokers list use 
+cluster1/broker1/bin/pulsar-admin brokers leader-broker   //get leader broker
 ```
