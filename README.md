@@ -100,3 +100,18 @@ cluster1/broker1/bin/pulsar-daemon start broker
 #### 5. Connect to the running cluster
 for detailed information please follow the steps [link](https://pulsar.apache.org/docs/2.11.x/deploy-bare-metal/#connect-to-the-running-cluster)
 
+
+## Pulsar admin API interfaces
+#### List Clusters
+```
+cluster1/broker1/bin/pulsar-admin clusters list
+```
+#### Tenant resources
+``` 
+cluster1/broker1/bin/pulsar-admin tenants list
+cluster1/broker1/bin/pulsar-admin brokers leader-broker   //get leader broker
+```
+#### Brokers resources
+```
+cluster1/broker1/bin/pulsar-admin brokers list use 
+```
