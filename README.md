@@ -135,4 +135,9 @@ cluster1/broker1/bin/pulsar-client consume \
 
 ```
 #### 4. Managing Namespaces
-
+```
+cluster1/broker1/bin/pulsar-admin namespaces list test-tenant
+cluster1/broker1/bin/pulsar-admin namespaces create test-tenant/namespace1   
+cluster1/broker1/bin/pulsar-admin namespaces policies test-tenant/namespace1  //fetch the current policies associated with a namespace
+cluster1/broker1/bin/pulsar-admin namespaces delete test-tenant/namespace1
+```
