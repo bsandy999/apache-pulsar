@@ -26,7 +26,7 @@ The setup consists of:-
 
 You can check out the [official site](https://pulsar.apache.org/docs/2.11.x/deploy-bare-metal/) for deployment steps/guides.
 
-### Most commonly used commands
+##### Most commonly used commands
 
 #### 1. Start zookeeper
 
@@ -141,3 +141,8 @@ cluster1/broker1/bin/pulsar-admin namespaces create test-tenant/namespace1
 cluster1/broker1/bin/pulsar-admin namespaces policies test-tenant/namespace1  //fetch the current policies associated with a namespace
 cluster1/broker1/bin/pulsar-admin namespaces delete test-tenant/namespace1
 ```
+ ###### 4.1  Configure replication clusters
+ ```
+ cluster1/broker1/bin/pulsar-admin namespaces set-clusters test-tenant/namespace1 --clusters cl1,cl2
+ cluster1/broker1/bin/pulsar-admin namespaces get-clusters test-tenant/cluster1/namespace1
+ ```
