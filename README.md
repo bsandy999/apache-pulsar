@@ -115,3 +115,23 @@ cluster1/broker1/bin/pulsar-admin tenants list
 cluster1/broker1/bin/pulsar-admin brokers list use 
 cluster1/broker1/bin/pulsar-admin brokers leader-broker   //get leader broker
 ```
+Once that is complete, you can publish a message to the Pulsar topic:
+
+```
+cluster1/broker1/bin/pulsar-client produce \
+    persistent://public/default/test \
+    -n 1 \
+    -m "Hello Pulsar"
+
+```
+This command publishes a single message to the Pulsar topic. In addition, you can subscribe to the Pulsar topic in a different terminal before publishing messages as below:
+
+```
+cluster1/broker1/bin/pulsar-client consume \
+    persistent://public/default/test \
+    -n 100 \
+    -s "consumer-test" \
+    -t "Exclusive"
+
+```
+
