@@ -97,3 +97,6 @@ bk-cluster/bk1/bin/bookkeeper shell simpletest --ensemble <num-bookies> --writeQ
 cluster1/broker1/bin/pulsar-daemon start broker
 ```
 
+#### 5. Connect to the running cluster
+for detailed information please follow the steps [link](https://pulsar.apache.org/docs/2.11.x/deploy-bare-metal/#connect-to-the-running-cluster)
+
