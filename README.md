@@ -10,15 +10,15 @@ The setup consists of:-
 
 ---
 
-[Zookeeper](https://zookeeper.apache.org/) manages a variety of essential coordination-related and configuration-related tasks for Pulsar. To deploy a Pulsar cluster, you need to deploy ZooKeeper first. A 3-node ZooKeeper cluster is the recommended configuration.
+- [Zookeeper](https://zookeeper.apache.org/) manages a variety of essential coordination-related and configuration-related tasks for Pulsar. To deploy a Pulsar cluster, you need to deploy ZooKeeper first. A 3-node ZooKeeper cluster is the recommended configuration.
 
-[Metadata](https://pulsar.apache.org/docs/2.11.x/deploy-bare-metal/#initialize-cluster-metadata) Once you deploy ZooKeeper for your cluster, you need to write some metadata to ZooKeeper. You only need to write this data once.
+- [Metadata](https://pulsar.apache.org/docs/2.11.x/deploy-bare-metal/#initialize-cluster-metadata) Once you deploy ZooKeeper for your cluster, you need to write some metadata to ZooKeeper. You only need to write this data once.
 
-[BookKeepers](https://bookkeeper.apache.org/) handles all persistent data storage in Pulsar. You need to deploy a cluster of BookKeeper bookies to use Pulsar.
+- [BookKeepers](https://bookkeeper.apache.org/) handles all persistent data storage in Pulsar. You need to deploy a cluster of BookKeeper bookies to use Pulsar.
 
-[Brokers](https://pulsar.apache.org/docs/2.11.x/admin-api-brokers/) handle Pulsar messages and provide the administrative interface of Pulsar.
+- [Brokers](https://pulsar.apache.org/docs/2.11.x/admin-api-brokers/) handle Pulsar messages and provide the administrative interface of Pulsar.
 
-[Client](https://pulsar.apache.org/docs/2.11.x/deploy-bare-metal/#connect-to-the-running-cluster) Once your Pulsar cluster is up and running, you should be able to connect with it using Pulsar clients. One such client is the `pulsar-client` tool, which is included with the Pulsar binary package. The pulsar-client tool can publish messages to and consume messages from Pulsar topics and thus provide a simple way to make sure that your cluster runs properly.
+- [Client](https://pulsar.apache.org/docs/2.11.x/deploy-bare-metal/#connect-to-the-running-cluster) Once your Pulsar cluster is up and running, you should be able to connect with it using Pulsar clients. One such client is the `pulsar-client` tool, which is included with the Pulsar binary package. The pulsar-client tool can publish messages to and consume messages from Pulsar topics and thus provide a simple way to make sure that your cluster runs properly.
 
 ---
 
