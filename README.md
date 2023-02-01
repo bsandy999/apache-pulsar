@@ -92,6 +92,8 @@ After you start all the bookies, you can use `simpletest` command for BookKeeper
 bk-cluster/bk1/bin/bookkeeper shell simpletest --ensemble <num-bookies> --writeQuorum <num-bookies> --ackQuorum <num-bookies> --numEntries <num-entries>
 ```
 
-
-
+#### 4. Deploy Pulsar brokers
+```
+cluster1/broker1/bin/pulsar-daemon start broker
+```
 
