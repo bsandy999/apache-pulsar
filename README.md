@@ -102,15 +102,15 @@ for detailed information please follow the steps [link](https://pulsar.apache.or
 
 
 ## Pulsar admin API interfaces
-#### List Clusters
+#### 1. List Clusters
 ```
 cluster1/broker1/bin/pulsar-admin clusters list
 ```
-#### Tenant resources
+#### 2. Tenant resources
 ``` 
 cluster1/broker1/bin/pulsar-admin tenants list
 ```
-#### Brokers resources
+#### 3. Brokers resources
 ```
 cluster1/broker1/bin/pulsar-admin brokers list use 
 cluster1/broker1/bin/pulsar-admin brokers leader-broker   //get leader broker
@@ -134,4 +134,5 @@ cluster1/broker1/bin/pulsar-client consume \
     -t "Exclusive"
 
 ```
+#### 4. Managing Namespaces
 
