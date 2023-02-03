@@ -39,7 +39,7 @@ cluster1/zk1/bin/pulsar-daemon start zookeeper
 
 ```bash
 cluster1/zk1/bin/pulsar initialize-cluster-metadata \
-    --cluster c1 \
+    --cluster node1 \
     --metadata-store zk:10.160.0.8:2181,10.160.0.9:2181,10.160.0.10:2181 \
     --configuration-metadata-store zk:10.160.0.8:2181,10.160.0.9:2181,10.160.0.10:2181 \
     --web-service-url http://10.160.0.8:8080,10.160.0.9:8080,10.160.0.10:8080 \
@@ -51,7 +51,7 @@ cluster1/zk1/bin/pulsar initialize-cluster-metadata \
 
 ```bash
 cluster1/zk1/bin/pulsar initialize-cluster-metadata \
-    --cluster c2 \
+    --cluster node2 \
     --metadata-store zk:10.160.0.8:2181,10.160.0.9:2181,10.160.0.10:2181 \
     --configuration-metadata-store zk:10.160.0.8:2181,10.160.0.9:2181,10.160.0.10:2181 \
     --web-service-url http://10.160.0.8:8080,10.160.0.9:8080,10.160.0.10:8080 \
@@ -63,7 +63,7 @@ cluster1/zk1/bin/pulsar initialize-cluster-metadata \
 
 ```bash
 cluster1/zk1/bin/pulsar initialize-cluster-metadata \
-    --cluster c3 \
+    --cluster node3 \
     --metadata-store zk:10.160.0.8:2181,10.160.0.9:2181,10.160.0.10:2181 \
     --configuration-metadata-store zk:10.160.0.8:2181,10.160.0.9:2181,10.160.0.10:2181 \
     --web-service-url http://10.160.0.8:8080,10.160.0.9:8080,10.160.0.10:8080 \
